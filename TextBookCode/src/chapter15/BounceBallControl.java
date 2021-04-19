@@ -1,9 +1,12 @@
 package chapter15;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
 
 public class BounceBallControl extends Application {
   @Override // Override the start method in the Application class
@@ -11,8 +14,21 @@ public class BounceBallControl extends Application {
     BallPane ballPane = new BallPane(); // Create a ball pane
 
     // Pause and resume animation
-    ballPane.setOnMousePressed(e -> ballPane.pause());
-    ballPane.setOnMouseReleased(e -> ballPane.play());
+   // ballPane.setOnMousePressed(e -> ballPane.pause());
+    
+    
+    EventHandler<MouseEvent> handle1 = new EventHandler<MouseEvent>() {
+		@Override
+		public void handle(MouseEvent arg0) {
+			ballPane.pause();
+		}};
+	ballPane.setOnMousePressed(handle1);
+	
+		
+    ballPane.setOnMouseReleased(e ->{
+    	ballPane.play();
+    	System.out.println("mouse released");
+    });
 
     // Increase and decrease animation   
     ballPane.setOnKeyPressed(e -> {
@@ -25,7 +41,7 @@ public class BounceBallControl extends Application {
     });
 
     // Create a scene and place it in the stage
-    Scene scene = new Scene(ballPane, 250, 150);
+    Scene scene = new Scene(ballPane, 400, 300);
     primaryStage.setTitle("BounceBallControl"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage

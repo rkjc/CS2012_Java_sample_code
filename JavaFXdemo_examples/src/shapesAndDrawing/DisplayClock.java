@@ -17,13 +17,13 @@ public class DisplayClock extends Application {
     Label lblCurrentTime = new Label(timeString);
 
     // Place clock and label in border pane
-    BorderPane pane = new BorderPane();
-    pane.setCenter(clock);
-    pane.setBottom(lblCurrentTime);
+    BorderPane bPane = new BorderPane();
+    bPane.setCenter(clock);
+    bPane.setBottom(lblCurrentTime);
     BorderPane.setAlignment(lblCurrentTime, Pos.TOP_CENTER);
 
     // Create a scene and place it in the stage
-    Scene scene = new Scene(pane, 250, 250);
+    Scene scene = new Scene(bPane, 250, 250);
     primaryStage.setTitle("DisplayClock"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage

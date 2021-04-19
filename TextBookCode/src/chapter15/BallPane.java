@@ -39,6 +39,7 @@ public class BallPane extends Pane {
   }
 
   public void decreaseSpeed() {
+	System.out.println(animation.getRate());
     animation.setRate(
       animation.getRate() > 0 ? animation.getRate() - 0.1 : 0);
   }
