@@ -14,6 +14,7 @@ public class ButtonEventHandleingEvolution extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
+				
 		primaryStage.setTitle("Two Button HBox");
 
 		HBox hPane = new HBox(10); // the 10 is the space between the buttons (nodes)
@@ -67,3 +68,10 @@ public class ButtonEventHandleingEvolution extends Application {
 		Application.launch(args);
 	}
 }
+
+
+class HappyDogs {
+	
+}
+
+

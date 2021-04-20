@@ -18,7 +18,7 @@ public class GridPaneDemo extends Application {
 	public void start(Stage primaryStage) {
 		// Create a pane and set its properties
 		GridPane gPane = new GridPane();
-		gPane.setAlignment(Pos.CENTER);
+		gPane.setAlignment(Pos.CENTER);  // places contents in the center of the grid cell
 		gPane.setPadding(new Insets(11.5, 12.5, 13.5, 14.5));
 		gPane.setHgap(5.5);
 		gPane.setVgap(5.5);
@@ -67,10 +67,7 @@ public class GridPaneDemo extends Application {
 		primaryStage.show(); // Display the stage
 	}
 
-	/**
-	 * The main method is only needed for the IDE with limited JavaFX support. Not
-	 * needed for running from the command line.
-	 */
+// -------------------------------------------------------
 	public static void main(String[] args) {
 		launch(args);
 	}
