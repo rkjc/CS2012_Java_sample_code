@@ -2,6 +2,8 @@ package animations;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+
+import javafx.animation.Timeline;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -13,6 +15,8 @@ public class ClockPane4hand extends Pane {
 	private int minute;
 	private int second;
 	private int millies;
+	
+	double Timeline = 0.0;
 
 	/** Construct a default clock with the current time */
 	public ClockPane4hand() {
@@ -131,6 +135,10 @@ public class ClockPane4hand extends Pane {
 		getChildren().addAll(circle, t1, t2, t3, t4, sLine, mLine, hLine, msLine);
 	}
 
+	public void increaseRate() {
+		
+	}
+	
 	@Override
 	public void setWidth(double width) {
 		super.setWidth(width);

@@ -33,8 +33,19 @@ public class LayoutOfLayouts extends Application {
 		mycircle2.setStroke(Color.RED);
 		mycircle2.setFill(Color.SKYBLUE);
 
+		Circle mycircle3 = new Circle();
+		mycircle3.setCenterX(370);
+		mycircle3.setCenterY(400);
+		mycircle3.setRadius(20);
+		mycircle3.setStroke(Color.GREEN);
+		mycircle3.setFill(Color.LIME);
+		// StackPane.setAlignment(mycircle, Pos.CENTER_LEFT);
+		StackPane.setAlignment(mycircle, Pos.CENTER);
+
+		// -------------------------------------------------------------
 		Pane mypane = new Pane();
-		//Pane mypane = new StackPane();
+		// Pane mypane = new StackPane();
+		mypane.setPadding(new Insets(10, 10, 10, 10));
 		mypane.setStyle("-fx-background-color: BLUE; -fx-border-color: orange; -fx-border-width: 4; ");
 
 		Pane mypane2 = new Pane();
@@ -96,25 +107,30 @@ public class LayoutOfLayouts extends Application {
 		hb01.setLayoutX(180);
 		hb01.setLayoutY(220);
 		StackPane.setAlignment(hb01, Pos.BOTTOM_CENTER);
-		
+
 		HBox hb02 = new HBox();
 		hb02.setStyle("-fx-background-color: lightgreen; -fx-border-color: olive; -fx-border-width: 2; ");
 		hb02.setMinSize(320, 40);
-		
-		
-		VBox vb01 = new VBox();
+
+		VBox vb01 = new VBox(30);
+		vb01.setLayoutX(15);
+		vb01.setLayoutY(5);
 		vb01.setStyle("-fx-background-color: pink; -fx-border-color: violet; -fx-border-width: 3; ");
 
 		mypane2.getChildren().add(gPane);
 		mypane2.getChildren().add(hb01);
-		
+		// mypane2.getChildren().add(mycircle3);
+
+		vb01.setAlignment(Pos.BOTTOM_CENTER);
 		vb01.getChildren().add(mypane2);
 		vb01.getChildren().add(hb02);
+		vb01.getChildren().add(mycircle3);
 
 		mypane.getChildren().add(vb01);
-		
+
 		// Create a scene and place it in the stage
-		Scene scene = new Scene(mypane, 400, 400);
+		// Scene scene = new Scene(mypane, 400, 400);
+		Scene scene = new Scene(mypane);
 		theStage.setTitle("Layout of Layouts"); // Set the stage title
 		theStage.setScene(scene); // Place the scene in the stage
 		theStage.setX(7400); // start location on desktop.

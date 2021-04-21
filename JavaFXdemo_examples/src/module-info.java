@@ -2,6 +2,7 @@ module javafxdemo_examples {
 	requires javafx.base;
 	requires javafx.graphics;
 	requires javafx.controls;
+	requires javafx.media;
 	
 	exports solutions;
 	exports shapesAndDrawing;
@@ -10,4 +11,5 @@ module javafxdemo_examples {
 	exports layoutDemos;
 	exports eventHandling;
 	exports animations;
+	exports media;
 }
