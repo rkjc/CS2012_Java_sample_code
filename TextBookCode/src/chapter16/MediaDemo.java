@@ -17,7 +17,7 @@ import javafx.util.Duration;
 
 public class MediaDemo extends Application {
   private static final String MEDIA_URL = 
-    "https://liveexample.pearsoncmg.com/common/audio/anthem/anthem1.mp3";
+    "https://liveexample.pearsoncmg.com/common/audio/anthem/anthem3.mp3";
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
