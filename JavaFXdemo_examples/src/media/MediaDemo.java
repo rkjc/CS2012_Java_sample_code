@@ -82,8 +82,8 @@ public class MediaDemo extends Application {
 		//Scene scene = new Scene(bPane, 650, 500);
 		primaryStage.setTitle("MediaDemo"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
-		primaryStage.setX(7400); // start location on desktop.
-		primaryStage.setY(100);
+//		primaryStage.setX(7400); // start location on desktop.
+//		primaryStage.setY(100);
 		primaryStage.show(); // Display the stage
 	}
 

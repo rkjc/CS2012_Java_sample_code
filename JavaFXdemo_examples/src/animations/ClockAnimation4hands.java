@@ -35,8 +35,8 @@ public class ClockAnimation4hands extends Application {
 		Scene scene = new Scene(clock, 250, 250);
 		primaryStage.setTitle("ClockAnimation"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
-		primaryStage.setX(7400); // start location on desktop.
-		primaryStage.setY(60);
+//		primaryStage.setX(7400); // start location on desktop.
+//		primaryStage.setY(60);
 		primaryStage.show(); // Display the stage
 	}
 

@@ -73,8 +73,8 @@ public class Twentyx20Buttons extends Application{
 		
 		Scene sc = new Scene(vPane, 1000, 700);
 		primaryStage.setScene(sc);
-		primaryStage.setX(7400);  // start location on desktop.
-		primaryStage.setY(100);
+//		primaryStage.setX(7400);  // start location on desktop.
+//		primaryStage.setY(100);
 		primaryStage.show();
 	}
 
