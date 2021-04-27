@@ -42,7 +42,7 @@ public class JavaFXMenuDemoModded extends Application {
 		albl.getStyleClass().add("about");
 
 		Scene scene = new Scene(gp, 300, 300);
-		
+				
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
 		stage.setTitle("Menu Sample");
@@ -104,8 +104,8 @@ public class JavaFXMenuDemoModded extends Application {
 				// popup.setX(100);
 				
 				VBox v = new VBox();	
-//				v.getStyleClass().add("about");
-//				v.getStyleClass().add("boxes");
+				v.getStyleClass().add("about");
+				v.getStyleClass().add("boxes");
 				v.setId("vbox-1");
 				
 				Text t = new Text("Copyright 2014 by John Hurley");
@@ -114,6 +114,13 @@ public class JavaFXMenuDemoModded extends Application {
 				v.getChildren().addAll(t, okButton);
 				okButton.setOnAction(e -> {
 					popup.hide();
+				});
+				
+				Button happyButton = new Button("Happy");
+				v.getChildren().addAll(happyButton);
+				happyButton.setOnAction(e -> {
+					happyButton.setStyle("-fx-background-color: orange; ");
+					happyButton.setText("Very Good");
 				});
 
 				popup.getContent().addAll(v);

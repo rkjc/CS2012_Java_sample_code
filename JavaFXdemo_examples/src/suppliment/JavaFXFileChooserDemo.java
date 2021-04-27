@@ -45,8 +45,8 @@ public class JavaFXFileChooserDemo extends Application {
 
 
 		stage.setScene(scene);
-		stage.setX(7400);  // start location on desktop. *** make sure to change or disable
-		stage.setY(100);   // start location on desktop. *** make sure to change or disable
+//		stage.setX(7400);  // start location on desktop. *** make sure to change or disable
+//		stage.setY(100);   // start location on desktop. *** make sure to change or disable
 		stage.show();
 	}
 

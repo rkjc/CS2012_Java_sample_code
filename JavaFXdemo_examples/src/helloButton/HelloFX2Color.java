@@ -14,7 +14,9 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class HelloFX2Color extends Application {
-
+	
+	boolean isOn = false;
+	
 	@Override
 	public void start(Stage primaryStage) {
 
@@ -24,13 +26,20 @@ public class HelloFX2Color extends Application {
 
 		Button btn = new Button("Say 'Hello World'");
 		btn.setStyle("-fx-background-color: cyan");
-
+	
 		
 		btn.setOnAction( xyz -> {
-			
-			FileChooser fileChooser = new FileChooser();
+			//FileChooser fileChooser = new FileChooser();
 			//File file = fileChooser.showOpenDialog(primaryStage);
-			
+			if(isOn) {
+				//means isOn = true
+				isOn = false;
+				btn.setStyle("-fx-background-color: red");
+			} else {
+				//means isOn = false
+				isOn = true;
+				btn.setStyle("-fx-background-color: green");
+			}
 //			tx.setText("------------------------------------------------");
 //			System.out.println("Hello to the World!");
 //			System.out.println(xyz.getSource().toString());	
