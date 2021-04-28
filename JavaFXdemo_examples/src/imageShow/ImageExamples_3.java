@@ -21,8 +21,9 @@ public class ImageExamples_3 extends Application {
 
 		File sampleImageFile1 = new File("crazyCat.jpg");
 		String sampleImageFile1_locationString = sampleImageFile1.toURI().toURL().toExternalForm(); // the Image
-																									// constructor needs
-																									// an absolute path.
+			
+		
+		// constructor needs																							// an absolute path.
 		Image catImage = new Image(sampleImageFile1_locationString, false); // false => does not load in background,
 																			// loads immediately
 		ImageView catView = new ImageView(catImage);

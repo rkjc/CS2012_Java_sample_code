@@ -31,18 +31,17 @@ import javafx.stage.Stage;
 public class JavaFXFileChooserDemo extends Application {
 	@Override
 	public void start(Stage stage) {
-		stage.setTitle("Text File Dumper");
 		
 		VBox vb = new VBox();
 		Scene scene = new Scene(vb, 300, 300);
-		stage.setTitle("File Chooser Sample");
+		stage.setTitle("File Chooser Sample - go team go");
 
 		TextArea atext = new TextArea();
+		atext.setStyle("-fx-foreground-color: cyan");
 		MenuBar menuBar = setUpMenuBar(stage, atext);
 
 		vb.getChildren().add(menuBar);
 		vb.getChildren().add(atext);
-
 
 		stage.setScene(scene);
 //		stage.setX(7400);  // start location on desktop. *** make sure to change or disable

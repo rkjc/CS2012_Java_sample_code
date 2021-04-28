@@ -163,8 +163,8 @@ public class LayoutOfLayouts extends Application {
 		Scene scene = new Scene(mp01);
 		theStage.setTitle("Layout of Layouts"); // Set the stage title
 		theStage.setScene(scene); // Place the scene in the stage
-//		theStage.setX(7400); // start location on desktop.
-//		theStage.setY(80);
+//		theStage.setX(7400);  // start location on desktop. *** make sure to change or disable
+//		theStage.setY(100);   // start location on desktop. *** make sure to change or disable
 		theStage.show(); // Display the stage
 	}
 
