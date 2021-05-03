@@ -7,6 +7,7 @@ module javafxdemo_examples {
 	exports controlsUI;
 	exports suppliment;
 	exports solutions;
+	exports solutions.eightball;
 	exports shapesAndDrawing;
 	exports imageShow;
 	exports helloButton;

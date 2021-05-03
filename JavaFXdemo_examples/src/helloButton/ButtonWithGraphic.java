@@ -1,50 +1,56 @@
 package helloButton;
 
-import java.io.File;
-
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class ButtonWithGraphic extends Application {
 
+	boolean toggle = false;
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setTitle("Button with Image");
+		primaryStage.setTitle("Button with Graphic");
 
-		Button btn1 = new Button(); // any text put here will end up next to the picture on the button
+		Button btn1 = new Button(); // Any text put here will end up next to the picture on the button
+		btn1.setPadding(new Insets(-5, -10, -5, -10)); // (top,right,bottom,left) - defaults (5,10,5,10)
+		btn1.setMinSize(90,50);
+
 		Label lab1 = new Label("output shown here");
 
-		// Use the File class to store the file path from a relative location
-		File imgFile1 = new File("crazyCat.jpg"); // in default Eclipse file location
+		// Button will expand to contain the graphic
+		Rectangle rec01 = new Rectangle(0, 0, 80, 40); // (startLocX,startLocY,Width,Height)
+		rec01.setStroke(Color.RED);
+		rec01.setFill(Color.LIME);
+		
+		Polygon triangle01 = new Polygon(0,0, 40, 20, 0,40);
+		triangle01.setStroke(Color.BLUE);
+		triangle01.setFill(Color.CYAN);
 
-		// Convert the file location into an absolute path location string
-		// Involves file I/O so needs to handle an exception by adding a 'throws'
-		// declaration to the start() method
-		String imgFileloc1 = imgFile1.toURI().toURL().toExternalForm();
-
-		Image img1 = new Image(imgFileloc1); // the Image constructor needs an absolute path.
-
-		// Use the Image object to make an ImageView object and set its parameters
-		ImageView btnPic1 = new ImageView(img1);
-
-		btnPic1.setFitWidth(50); // setting size of the image - which sets size of Button
-		btnPic1.setPreserveRatio(true);
-
-		// Attach the picture to the button
-		btn1.setGraphic(btnPic1);
+		btn1.setGraphic(rec01);
 
 		// Lambda Function version of an Event Handler
+		
 		btn1.setOnAction(xyz -> {
+			if(toggle) {
+				lab1.setText("toggle was true");
+				btn1.setGraphic(rec01);
+			} else {
+				lab1.setText("toggle was false");
+				btn1.setGraphic(triangle01);
+			}
+			toggle = ! toggle;
 			lab1.setText("Button was pushed");
 		});
 
-		VBox vbx1 = new VBox(10);
+		VBox vbx1 = new VBox();
 		vbx1.getChildren().add(btn1);
 		vbx1.getChildren().add(lab1);
 

@@ -6,6 +6,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ScrollPane.ScrollBarPolicy;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -21,7 +23,8 @@ public class HelloFX2withTextArea extends Application {
 
 		//Text tx = new Text("Look at this awesome text!.Hidden behind the button");
 		TextArea atext = new TextArea();
-		atext.setText("This text area is under construction");
+		atext.setText("Enter some text here");
+		//atext.getStyleClass().add("text-area");
 		
 		Button btn = new Button("Say 'Hello World'");
 		
@@ -41,6 +44,7 @@ public class HelloFX2withTextArea extends Application {
 		vBox.getChildren().add(lbl1);
 
 		Scene sc = new Scene(vBox, 400, 250);
+		//rsc.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 		primaryStage.setScene(sc);
 		primaryStage.show();
 	}

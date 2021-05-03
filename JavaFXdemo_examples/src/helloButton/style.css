@@ -1,10 +1,3 @@
-
-.text-area > .scroll-pane{
-    -fx-background-color: #FF0000;
-	-fx-vbar-policy:always; 
-	-fx-hbar-policy:always;
-}
-
 .zondar{
     -fx-background-color: #FFFF00;
     -fx-text-fill: #00DDFF;

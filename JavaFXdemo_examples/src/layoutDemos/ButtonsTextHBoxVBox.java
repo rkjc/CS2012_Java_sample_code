@@ -15,7 +15,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class ButtonsOnTop extends Application {
+public class ButtonsTextHBoxVBox extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -71,9 +71,10 @@ public class ButtonsOnTop extends Application {
 		hbox1.getChildren().add(btn2);
 		
 //		vbox1.getChildren().add(gridBox);
-		vbox1.getChildren().add(hbox1);
+
 		vbox1.getChildren().add(txt1);
 		vbox1.getChildren().add(txt2);
+		vbox1.getChildren().add(hbox1);
 
 		Scene sc = new Scene(vbox1, 400, 250);
 		primaryStage.setScene(sc);

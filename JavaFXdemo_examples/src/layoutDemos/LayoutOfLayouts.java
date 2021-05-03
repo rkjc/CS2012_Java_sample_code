@@ -177,3 +177,6 @@ public class LayoutOfLayouts extends Application {
 	}
 
 }
+
+// here is a good reference
+// https://docs.oracle.com/javase/8/javafx/layout-tutorial/builtin_layouts.htm#JFXLY102

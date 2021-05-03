@@ -8,4 +8,5 @@ module textbookcode {
 	exports chapter14;
 	exports chapter15;
 	exports chapter16;
+	exports chapter17;
 }
