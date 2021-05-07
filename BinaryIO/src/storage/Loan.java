@@ -1,16 +1,18 @@
-package binaryio;
+package storage;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
 
-public class Loan implements Serializable{
-	private double annualInterestRate;
-	private int numberOfYears;
-	private double loanAmount;
+public class Loan implements Serializable {
+	private Double annualInterestRate;
+	private Integer numberOfYears;
+	private Double loanAmount;
 	private java.util.Date loanDate;
 
 	/** Default constructor */
 	public Loan() {
-		this(2.5, 1, 1000);
+		this(2.7, 1, 1000);
 	}
 
 	/**
@@ -72,4 +74,5 @@ public class Loan implements Serializable{
 	public java.util.Date getLoanDate() {
 		return loanDate;
 	}
+
 }

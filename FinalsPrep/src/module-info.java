@@ -4,5 +4,5 @@ module finalsPrep {
 	requires javafx.controls;
 	requires javafx.media;
 	
-	exports finalspractice;
+	exports finalspractice_1;
 }

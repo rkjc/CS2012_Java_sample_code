@@ -26,7 +26,6 @@ public class MainStart extends Application {
 		hbox1.setStyle("-fx-background-color: CYAN");
 		hbox1.setAlignment(Pos.CENTER);
 		
-		Text txt1 = new Text("Text at the top of the VBox stack");
 		Button btn1 = new Button();
 		Button btn2 = new Button();
 		

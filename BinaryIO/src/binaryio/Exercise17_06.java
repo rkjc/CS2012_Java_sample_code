@@ -14,6 +14,7 @@ public class Exercise17_06 {
       output.writeObject(new Loan(4.5, 5, 3000));
       output.writeObject(new Loan(5.5, 5, 4000));
       output.writeObject(new Loan(6.5, 5, 5000));
+      output.writeObject(new Loan(4.9, 5, 19000));
     }
   }
 }

@@ -3,8 +3,8 @@ package chapter17;
 import java.io.*;
 
 public class TestObjectInputStream {
-  public static void main(String[] args)
-    throws ClassNotFoundException, IOException {
+  public static void main(String[] args) throws ClassNotFoundException, IOException {
+	  
     try ( // Create an input stream for file object.dat
       ObjectInputStream input =
         new ObjectInputStream(new FileInputStream("object.dat"));
@@ -16,4 +16,5 @@ public class TestObjectInputStream {
       System.out.println(name + " " + score + " " + date);
     }
   }
+  
 }

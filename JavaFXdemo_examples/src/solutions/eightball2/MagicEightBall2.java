@@ -18,9 +18,8 @@ public class MagicEightBall2 extends StackPane {
 
 	Circle circle = new Circle(90); 
 	WiseSayings wisay = new WiseSayings();
-	Label albl = new Label("O_O");
+	Label theLabel = new Label("O_O");
 	Polygon tring1 = new Polygon(0,-70, 70, 50, -70, 50); 
-	Polygon tring2 = new Polygon(0,-70, 70, 50, -70, 50); 
 	String saythis = "";
 	double alpha = 0.0;
 	Timeline animation;
@@ -29,40 +28,30 @@ public class MagicEightBall2 extends StackPane {
 	public MagicEightBall2() throws Exception {
 		
 		File sampleImageFile1 = new File("MagicAnswerBall-trimed.jpg");
-		
 		String sampleImageFile1_locationString = sampleImageFile1.toURI().toURL().toExternalForm(); // the Image constructor needs an absolute path.
-
 		Image backgroundImage = new Image(sampleImageFile1_locationString, false); //false => does not load in background, loads immediately
-		ImageView catView = new ImageView(backgroundImage);
-		
-		getChildren().add(catView);
+		ImageView ballPic = new ImageView(backgroundImage);	
 		
 		tring1.setTranslateX(10);
 		tring1.setTranslateY(-10);
 		tring1.setFill(Color.DARKBLUE);
-		tring1.setRotate(180); 
-		
-		tring2.setTranslateX(10);
-		tring2.setTranslateY(-10);
-		tring2.setFill(Color.rgb(0, 0, 0, 0.0));
-		tring2.setRotate(180); 
+		tring1.setRotate(180); 	
 		
 		circle.setTranslateX(10);
 		circle.setTranslateY(-20);	
 	    circle.setFill(Color.rgb(windowR, windowG, windowB, 1.0));
 	    circle.setStroke(Color.rgb(0, 0, 0, 0.0));
 
-
 		saythis = wisay.getRandomSaying();
 		
-		albl.setTranslateX(10);
-		albl.setTranslateY(-30);
-		albl.setText(saythis);
-		albl.setTextFill(Color.WHITE);
+		theLabel.setTranslateX(10);
+		theLabel.setTranslateY(-30);
+		theLabel.setText(saythis);
+		theLabel.setTextFill(Color.WHITE);
 		
-	    //getChildren().add(circle);
+		getChildren().add(ballPic);
 	    getChildren().add(tring1);
-	    getChildren().add(albl);
+	    getChildren().add(theLabel);
 	    getChildren().add(circle);
 	}
 	
@@ -82,6 +71,7 @@ public class MagicEightBall2 extends StackPane {
 	public void fadeUpWindow() {
 		alpha = 1.0;
 		animation = new Timeline(new KeyFrame(Duration.millis(50), e -> {
+			
 			circle.setFill(Color.rgb(windowR, windowG, windowB, alpha));
 			if(alpha > 0.011) {
 				alpha -= 0.01;
@@ -89,6 +79,7 @@ public class MagicEightBall2 extends StackPane {
 				animation.stop();
 				fadeDownWindow();
 			}
+			
 		}));
 		animation.setCycleCount(100);
 		animation.play(); // Start animation
@@ -96,7 +87,11 @@ public class MagicEightBall2 extends StackPane {
 	
 	public void showSaying() {
 		String saythis = wisay.getRandomSaying();
-		albl.setText(saythis);
+		theLabel.setText(saythis);
+		fadeUpWindow();
+	}
+	
+	public void showMystery() {
 	}
 	
 }

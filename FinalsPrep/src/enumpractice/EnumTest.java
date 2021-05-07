@@ -4,17 +4,20 @@ public class EnumTest {
 
 	public enum Day {
 		SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
-	}
+	};
 	
 	Day day;
 
 	public EnumTest(Day day) {
 		this.day = day;
 	}
+	
 
 	public static void main(String[] args) {
-		EnumTest firstDay = new EnumTest(Day.MONDAY);
+
+		EnumTest firstDay = new EnumTest(Day.MONDAY);		
 		firstDay.tellItLikeItIs();
+		
 		EnumTest thirdDay = new EnumTest(Day.WEDNESDAY);
 		thirdDay.tellItLikeItIs();
 		EnumTest fifthDay = new EnumTest(Day.FRIDAY);

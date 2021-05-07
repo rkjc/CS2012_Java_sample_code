@@ -19,30 +19,20 @@ public class MainStart2 extends Application {
 	public void start(Stage myStage) throws Exception {
 
 		BorderPane bpane = new BorderPane();
-		HBox hpane = new HBox(10);
 		MagicEightBall2 mball = new MagicEightBall2();
 		Button askQuest = new Button("ask Question");
 		BorderPane.setAlignment(askQuest, Pos.CENTER);
-		Button doClear = new Button("Clear");
+
 		
 		askQuest.setOnAction(abc -> {
 			mball.showSaying();
-			mball.fadeUpWindow();
 		});
-		
-		doClear.setOnAction(abc -> {
-			mball.fadeDownWindow();
-		});
-		
+			
 		mball.setOnMouseClicked(abc -> {
 			mball.showSaying();
 		});
 
-
-		//hpane.getChildren().addAll(askQuest,doClear);
-		hpane.setAlignment(Pos.CENTER);
 		bpane.setCenter(mball);
-
 		bpane.setBottom(askQuest);
 
 		Scene sc = new Scene(bpane);

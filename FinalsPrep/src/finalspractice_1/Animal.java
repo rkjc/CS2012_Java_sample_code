@@ -1,6 +1,7 @@
-package finalspractice;
+package finalspractice_1;
 
 public class Animal {
+
 
 	// double weight
 	// double length

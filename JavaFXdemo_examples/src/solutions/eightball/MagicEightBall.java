@@ -11,51 +11,36 @@ import javafx.scene.text.FontWeight;
 
 public class MagicEightBall extends StackPane {
 
-	private Label answer = new Label("o_O");
-
+	private Label answerLabel = new Label("o_O");
 	WiseSayings ws = new WiseSayings();
 	
 	public MagicEightBall() {	
-		answer.setAlignment(Pos.CENTER);
+		//answerLabel.setAlignment(Pos.CENTER);
 		
-		Circle bigCircle = new Circle(120); 
-		bigCircle.setFill(Color.rgb(0,0,0));
-		bigCircle.setStroke(Color.BLACK);
-		bigCircle.setStrokeWidth(4);
-		StackPane.setAlignment(bigCircle, Pos.CENTER);
-		
-		Circle smallCircle = new Circle(70); 
-		smallCircle.setFill(Color.rgb(200, 200, 200));
-		smallCircle.setStroke(Color.BLACK);
-		smallCircle.setStrokeWidth(4);
-		StackPane.setAlignment(smallCircle, Pos.CENTER);
+		Circle circ01 = new Circle(100); 
+		circ01.setFill(Color.rgb(200, 200, 200));
+		circ01.setStroke(Color.BLACK);
+		circ01.setStrokeWidth(40);
 
-		Polygon triangle01 = new Polygon(10,-100, 70,-10, -50,-10);
+		Polygon triangle01 = new Polygon(10, -100, 70, -10, -50,-10);
 		triangle01.setTranslateY(-15);
 		triangle01.setStroke(Color.DARKBLUE);
-		triangle01.setFill(Color.BLUE);
-		StackPane.setAlignment(triangle01, Pos.CENTER);
+		triangle01.setFill(Color.BLUE);	
 		
+		answerLabel.setFont(Font.font("Arial",  14));  //FontWeight.BOLD,
+		answerLabel.setTextFill(Color.WHITE);
 		
-		answer.setFont(Font.font("Arial",  14));  //FontWeight.BOLD,
-		answer.setTextFill(Color.WHITE);
-		
-		super.getChildren().clear();
-		super.getChildren().add(bigCircle);
-		super.getChildren().add(smallCircle);
-		super.getChildren().add(triangle01);
-		super.getChildren().add(answer);
-	}
-
-	public void setLabel(String msg) {
-		answer.setText(msg);
+		getChildren().clear();
+		getChildren().add(circ01);
+		getChildren().add(triangle01);
+		getChildren().add(answerLabel);
 	}
 	
 	public void showSaying() {
-		answer.setText(ws.getRandomSaying());
+		answerLabel.setText(ws.getRandomSaying());
 	}
 	
 	public void showMystery(){
-		answer.setText("  .   .\n.  . .    .\n  . . .. \n. .  .    .");
+		answerLabel.setText("  .   .\n.  . .    .\n  . . .. \n. .  .    .");
 	}
 }

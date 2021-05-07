@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class WiseSayings {
 	
-	Random rnd = new Random();
+	private Random rnd = new Random();
 
 	private String [] sayings = {" As I\nsee it,\n  yes.",
 			" Ask\nagain\n later.",

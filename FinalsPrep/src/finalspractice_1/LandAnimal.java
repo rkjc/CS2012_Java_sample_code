@@ -1,4 +1,4 @@
-package finalspractice;
+package finalspractice_1;
 
 public class LandAnimal {
 	//subclass of Animal
