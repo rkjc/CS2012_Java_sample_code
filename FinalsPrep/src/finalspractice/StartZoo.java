@@ -3,13 +3,13 @@ package finalspractice;
 public class StartZoo {
 
 	public static void main(String[] args) {
-		System.out.println();
+		System.out.println("Welcome to the Zoo. Enjoy your journey of discovery today as you visit the exhibits.");
 		// command line program
 		
-		// make 2 LandAnimal - fill in all their attributes
-		// make 2 Exhibits - set the climate and dimensions
-		// put some decoration in each exhibit - at least 1 decorations
-		// one LandAnimal to each exhibit
+		// make 2 LandAnimal objects - fill in all their attributes
+		// make 2 Exhibit objects - set the climate
+		// put some decoration in each exhibit (at least 1 decoration)
+		// add one LandAnimal to each exhibit
 		
 		// make an ArrayList to hold both exhibits 
 		
@@ -21,7 +21,8 @@ public class StartZoo {
 		
 		// as you leave the loop thank the user for visiting the Zoo
 		
-		System.out.println("Welcome to the Zoo. Enjoy your journey of discovery today as you visit the exhibits.");
+		
+		System.out.println("Thank you for visiting the Zoo. Looking forward to seeing you again in the future!");
 		
 	}
 
