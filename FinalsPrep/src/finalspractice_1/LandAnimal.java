@@ -1,13 +1,14 @@
 package finalspractice_1;
 
 public class LandAnimal {
-	//subclass of Animal
+	//make this a subclass of Animal
 	
-	// double length of fur (metric)
-	// String color and patterns
-	// Enum fur(0) or skin(1) or scales(1)
-	// Enum mammal(0) or reptile(0)
-	// Enum type of feet none(0) hoves(1) paws(2) 
-
+	// Enum CoveringType  fur or skin or scales  // 
+	// Enum PysiologyType  mammal or reptile
 	
+	// String decoration    //description of color and patterns  //for example "blue fur with orange spots"
+	// CoveringType covering    //variable to store CoveringType 
+	// PysiologyType physiology   //variable to store PysiologyType
+	
+	// constructor
 }

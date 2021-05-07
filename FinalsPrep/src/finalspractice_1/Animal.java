@@ -2,12 +2,11 @@ package finalspractice_1;
 
 public class Animal {
 
-
-	// double weight
-	// double length
-	// Enum food type carnivore(0) herbivore(1) omnivore(1)
-	// Enum type of animal prey(0) predator(1)
-	// String sound it makes
+	// Enum FoodType carnivore herbivore omnivore
 	
-	// include an abstract method: String getInfo()
+	// String typeOfAnimal  // for example cat, or elephant
+	// double weight
+	// FoodType foodType   // variable to store the type of food it eats
+	// String sound     // the noise it makes - for example "beep burping croak"
+	
 }
