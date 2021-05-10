@@ -25,7 +25,7 @@ public class StartMuseum {
 			// display exhibit
 			System.out.println("show exhibit details " + index);
 			
-
+			
 			index += 1;
 		}
 		
