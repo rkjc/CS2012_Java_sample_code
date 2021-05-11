@@ -9,14 +9,14 @@ public class Exhibit {
 		ArrayList<Animal> animals;
 		ArrayList<String> decorations; 
 		Climate environment;  // a variable to store the climate type in
-		
+		ArrayList<String> materials = new ArrayList<>();
 		
 		public Exhibit() {
 			animals = new ArrayList<>();
 			decorations = new ArrayList<>();
 		}
 		
-		
+
 		public ArrayList<Animal> getAnimals() {
 			return animals;
 		}

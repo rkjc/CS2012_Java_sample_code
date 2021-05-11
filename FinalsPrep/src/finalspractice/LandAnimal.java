@@ -40,3 +40,4 @@ public class LandAnimal extends Animal{
 			this.covering = covering;
 		}
 }
+

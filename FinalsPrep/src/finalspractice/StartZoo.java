@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import finalspractice.Animal.FoodType;
+import finalspractice.Exhibit.Climate;
 import finalspractice.LandAnimal.CoveringType;
 
 public class StartZoo {
@@ -30,36 +31,34 @@ public class StartZoo {
 		Exhibit exhib_1 = new Exhibit();
 		exhib_1.getDecorations().add("rock");
 		exhib_1.getDecorations().add("other rock");
+		exhib_1.setEnvironment(Climate.DESERT);
 		exhib_1.getAnimals().add(anim_1);
 		
 		Exhibit exhib_2 = new Exhibit();
 		exhib_2.getDecorations().add("log");
 		exhib_2.getDecorations().add("other log");
+		exhib_2.setEnvironment(Climate.JUNGLE);
 		exhib_2.getAnimals().add(anim_2);
 		
-		//System.out.println(exhib_1.getDecorations().get(0));
-
-// put some decoration in each exhibit (at least 1 decoration)
-// add one LandAnimal to each exhibit
-
-// make an ArrayList to hold both exhibits
 
 		Scanner uinput = new Scanner(System.in);
 
 		ArrayList<Exhibit> exhibitsArr = new ArrayList<>();
 		exhibitsArr.add(exhib_1);
-		exhibitsArr.add(exhib_2);
-		
+		exhibitsArr.add(exhib_2);	
 		
 		int repeats = 0;
 		while (repeats < exhibitsArr.size()) {
 			System.out.println("\nWelcome to the Zoo. Push 'Enter' to visit the next exhibit.");
 			uinput.nextLine();
-			System.out.println("-----------------------------------------------------------");
+			System.out.println("----------------------------------------------------");
 			
 			Exhibit tempExhib = exhibitsArr.get(repeats);
+			
 			System.out.println(tempExhib.getDecorations().get(0));
 			System.out.println(tempExhib.getDecorations().get(1));
+			System.out.println(tempExhib.getEnvironment());
+			
 			
 			LandAnimal tempLA = (LandAnimal) tempExhib.getAnimals().get(0);
 			
@@ -69,8 +68,6 @@ public class StartZoo {
 			System.out.println(tempLA.getFoodType());
 			System.out.println(tempLA.getDecoration()); 
 			System.out.println(tempLA.getCovering()); 
-			
-			
 			
 			System.out.println("-----------------------------------------------------------");
 			repeats++;
