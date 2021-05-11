@@ -1,19 +1,42 @@
 package finalspractice;
 
+import finalspractice.Animal.FoodType;
+import finalspractice.LandAnimal.CoveringType;
 
 public class LandAnimal extends Animal{
-		//make this a subclass of Animal
 	
-		// enum CoveringType  fur,  skin,  scales    
-			// make sure all the enum values are public 
-			// by convention the enum values should be capitalized 
+		public enum  CoveringType {FUR,  SKIN,  SCALES};    
 		
-		// *these should be private
-		// String decoration    // variable to store the description of color and patterns - for example "blue fur with orange spots"
-		// CoveringType covering    //variable to store CoveringType 
+		private String decoration;    // variable to store the description of color and patterns - for example "blue fur with orange spots"
+		private CoveringType covering;   //variable to store CoveringType 
 		
-		// make a constructor 
+		public LandAnimal() {
+		}
+		
+		public  LandAnimal(String typeOfAnimal, double weight, String sound, FoodType fudtyp, String decor, CoveringType coverUp ) {
+			setTypeOfAnimal(typeOfAnimal);
+			setWeight(weight);
+			setSound(sound);
+			setFoodType(fudtyp);
+			decoration = decor;
+			covering = coverUp;
+		}
 		
 		// add getters and setters for all the attributes
+		
+		public String getDecoration() {
+			return decoration;
+		}
 
+		public void setDecoration(String str) {
+			decoration = str;
+		}
+
+		public CoveringType getCovering() {
+			return covering;
+		}
+
+		public void setCovering(CoveringType covering) {
+			this.covering = covering;
+		}
 }
