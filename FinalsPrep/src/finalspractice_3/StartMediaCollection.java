@@ -2,7 +2,7 @@ package finalspractice_3;
 
 import java.util.Scanner;
 
-public class StartMediaViewer {
+public class StartMediaCollection {
 
 	public static void main(String[] args) {
 		
@@ -37,6 +37,7 @@ public class StartMediaViewer {
 			
 			item += 1;
 		}
+		userinput.close();
 
 		// display it all together one last time
 		for(int i = 0; i < numberItems; i++) {

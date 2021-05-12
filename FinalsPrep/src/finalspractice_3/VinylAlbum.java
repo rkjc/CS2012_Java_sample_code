@@ -1,6 +1,6 @@
 package finalspractice_3;
 
-public class VinalAlbum {
+public class VinylAlbum {
 
 
 }
