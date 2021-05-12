@@ -8,6 +8,8 @@ import finalspractice.LandAnimal;
 public class StartMuseum {
 
 	public static void main(String[] args) {
+		
+		
 		System.out.println("Welcome to the Museum. Enjoy your journey of discovery today as you visit the exhibits.");
 		
 		ArrayList<Exhibit> displays = new ArrayList<>();
