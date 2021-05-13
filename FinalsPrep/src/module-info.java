@@ -5,5 +5,5 @@ module finalsPrep {
 	requires javafx.media;
 	
 	exports finalspractice;
-	exports finalspractice_2;
+	//exports finalspractice_2;
 }
