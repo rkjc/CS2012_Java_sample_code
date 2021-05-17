@@ -9,16 +9,17 @@ import finalspractice_2.Exhibit.DisplayType;
 public class StartMuseum {
 
 	public static void main(String[] args) {
-		
-		//Artifact arrty = new Artifact();
-		
-		
 		System.out.println("Welcome to the Museum. Enjoy your journey of discovery today as you visit the exhibits.");	
 		
 		ArrayList<Exhibit> displays = new ArrayList<>();
 		
-		Mummy mum_1 = new Mummy("Amenophis II", true, false, "Egyptian Mummy", "found in Pyramid","1397 BCE");
+		Mummy mum_1 = new Mummy("Amenophis II", true, false, "Egyptian Mummy", "found in Pyramid","1397 BCE");		
 		Exhibit ex_1 = new Exhibit(DisplayType.PEDISTAL, mum_1 );
+		
+		// demonstration of the need to cast to Mummy(sub-class) to make the compiler happy
+		System.out.println( " is this mummy? " + (ex_1.getArt().get(0)).getClass()  );
+		System.out.println( ((Mummy)ex_1.getArt().get(0)).getNameOfPerson()  );
+				
 		
 		Mummy mum_2 = new Mummy("Ötzi", false, false, "Frozen Iceman", "found in French mountains","3300 BCE");
 		Exhibit ex_2 = new Exhibit(DisplayType.GLASSCASE, mum_2);

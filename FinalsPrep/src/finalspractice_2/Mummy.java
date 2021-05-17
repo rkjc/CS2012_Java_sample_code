@@ -5,9 +5,10 @@ public class Mummy extends Artifact implements Cursed {
 	private String nameOfPerson;
 	private boolean isCursed;
 	private boolean magicSealActivated;
+	
 
-//	public Mummy() {
-//		super();
+//	public Mummy() {	
+//		super("there");
 //		nameOfPerson = "unknown";
 //		isCursed = false;
 //		magicSealActivated = false;
@@ -15,25 +16,43 @@ public class Mummy extends Artifact implements Cursed {
 
 	public Mummy(String nameOfPerson, boolean isCursed, boolean magicProtection, String nameOfArtifact,
 			String descrption, String fromYear) {
-		
+
 		super(nameOfArtifact);
-		
 		this.nameOfPerson = nameOfPerson;
 		this.isCursed = isCursed;
 		this.magicSealActivated = magicProtection;
-		//setNameOfArtifact(nameOfArtifact);
+// setNameOfArtifact(nameOfArtifact);
 		setDescription(descrption);
 		setWhatYear(fromYear);
-	}
-
-	public void setNameOfPerson(String nameOfPerson) {
-		this.nameOfPerson = nameOfPerson;
+		
 	}
 
 	public String getNameOfPerson() {
 		return nameOfPerson;
 	}
 
+	public void setNameOfPerson(String nameOfPerson) {
+		this.nameOfPerson = nameOfPerson;
+	}
+
+	public boolean isCursed() {
+		return isCursed;
+	}
+
+	public void setCursed(boolean isCursed) {
+		this.isCursed = isCursed;
+	}
+
+	public boolean isMagicSealActivated() {
+		return magicSealActivated;
+	}
+
+	public void setMagicSealActivated(boolean magicSealActivated) {
+		this.magicSealActivated = magicSealActivated;
+	}
+
+// -------------------
+	
 	@Override
 	public void applyMagicSeal() {
 		magicSealActivated = true;
@@ -53,21 +72,4 @@ public class Mummy extends Artifact implements Cursed {
 	public void setIsCursed(boolean x) {
 		isCursed = x;
 	}
-
-	
-	//-------------------
-	@Override
-	public String toString() {
-		String tempstr = super.toString() 
-				+ "\nName of Person: " + this.nameOfPerson 
-				+ "\nArtifact is Cursed: " + isCursed 
-				+ "\nProtected by Magic Seal: " + this.magicSealActivated;
-
-		return tempstr;
-	}
-
-
 }
-
-
-//

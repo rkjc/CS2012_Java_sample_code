@@ -1,11 +1,15 @@
 package finalspractice_2;
 
 public abstract class Artifact {
+//public class Artifact {
 
 	private String nameOfArtifact;
 	private String description;
 	private String whatYear;
 
+//	public Artifact() {
+//		super();
+//	}
 	
 	
 	// only has default invisible constructor

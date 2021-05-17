@@ -1,6 +1,6 @@
 package finalspractice_2;
 
-public abstract interface Cursed {
+public interface Cursed {
 	
 	abstract public void applyMagicSeal();
     abstract public boolean checkMagicSeal();
